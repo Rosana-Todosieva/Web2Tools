@@ -15,13 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.views.static import serve
 
 from tools.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = {
+urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('addQuestion/', addQuestion, name='addQuestion'),
@@ -30,5 +29,5 @@ urlpatterns = {
     path('register/', registerPage, name='register'),
     path('exam/', exam, name='exam'),
 
-}
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
