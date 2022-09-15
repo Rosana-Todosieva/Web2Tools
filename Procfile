@@ -1,1 +1,1 @@
-web: gunicorn Web2Tools.wsgi --log-file -
+web: gunicorn Web2Tools.wsgi
