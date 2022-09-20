@@ -89,7 +89,7 @@ def loginPage(request):
 
 def logoutPage(request):
     logout(request)
-    return redirect('tools/login.html')
+    return render(request, 'tools/login.html')
 
 
 def home(request):
