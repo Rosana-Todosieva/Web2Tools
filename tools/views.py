@@ -2,7 +2,6 @@ from django.shortcuts import redirect, render
 from django.contrib.auth import login, logout, authenticate
 from .forms import *
 from .models import *
-from django.http import HttpResponse
 
 
 # Create your views here.
@@ -89,8 +88,28 @@ def loginPage(request):
 
 def logoutPage(request):
     logout(request)
-    return render(request, 'tools/login.html')
+    return render(request, 'tools/home.html')
 
 
 def home(request):
     return render(request, 'tools/home.html')
+
+
+def edmodo(request):
+    return render(request, 'tools/edmodo.html')
+
+
+def wordpress(request):
+    return render(request, 'tools/wordpress.html')
+
+
+def prezi(request):
+    return render(request, 'tools/prezi.html')
+
+
+def dropbox(request):
+    return render(request, 'tools/dropbox.html')
+
+
+def teacher(request):
+    return render(request, 'tools/teacher.html')

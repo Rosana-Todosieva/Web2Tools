@@ -21,13 +21,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home, name='home'),
-    path('addQuestion/', addQuestion, name='addQuestion'),
-    path('login/', loginPage, name='login'),
-    path('logout/', logoutPage, name='logout'),
-    path('register/', registerPage, name='register'),
-    path('exam/', exam, name='exam'),
+                  path('admin/', admin.site.urls),
+                  path('', home, name='home'),
+                  path('addQuestion/', addQuestion, name='addQuestion'),
+                  path('login/', loginPage, name='login'),
+                  path('logout/', logoutPage, name='logout'),
+                  path('register/', registerPage, name='register'),
+                  path('exam/', exam, name='exam'),
+                  path('edmodo/', edmodo, name='edmodo'),
+                  path('prezi/', prezi, name='prezi'),
+                  path('wordpress/', wordpress, name='wordpress'),
+                  path('dropbox/', dropbox, name='dropbox'),
+                  path('teacher/', teacher, name='teacher'),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
